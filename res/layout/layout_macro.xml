@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_macro_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Protein"
+        android:textSize="12sp"
+        android:textColor="@color/secondaryTextColor" />
+
+    <TextView
+        android:id="@+id/tv_macro_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="85g"
+        android:textStyle="bold"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_macro"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="8dp"
+        android:progress="70"
+        android:progressTint="@color/primaryColor" />
+
+</LinearLayout>

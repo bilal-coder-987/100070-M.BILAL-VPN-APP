@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vpnBlack">#000000</color>
+    <color name="vpnDarkGrey">#1A1A1A</color>
+    <color name="vpnAccent">#D4FF31</color>
+    <color name="vpnWhite">#FFFFFF</color>
+    <color name="vpnGrey">#8E8E93</color>
+    <color name="vpnGreen">#34C759</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- VPN UI Theme Mappings -->
+    <color name="primaryColor">@color/vpnBlack</color>
+    <color name="primaryDarkColor">@color/vpnBlack</color>
+    <color name="secondaryColor">@color/vpnAccent</color>
+    <color name="backgroundColor">@color/vpnBlack</color>
+    <color name="surfaceColor">@color/vpnDarkGrey</color>
+    <color name="primaryTextColor">@color/vpnWhite</color>
+    <color name="secondaryTextColor">@color/vpnGrey</color>
+    <color name="primaryLightColor">#33D4FF31</color>
+    <color name="accentColor1">@color/vpnAccent</color>
+    <color name="accentColor2">@color/vpnGreen</color>
+    <color name="accentColor3">@color/vpnAccent</color>
+
+    <!-- Legacy / Compatibility colors for old files -->
+    <color name="binanceBlack">#0B0E11</color>
+    <color name="binanceYellow">#FCD535</color>
+    <color name="binanceDarkYellow">#C99400</color>
+    <color name="binanceGray">#1E2329</color>
+    <color name="binanceLightGray">#474D57</color>
+    <color name="binanceTextWhite">#EAECEF</color>
+    <color name="binanceTextGray">#848E9C</color>
+    <color name="binanceGreen">#0ECB81</color>
+    <color name="binanceRed">#F6465D</color>
+    <color name="accentRed">#F6465D</color>
+    <color name="groceryPrimary">@color/vpnAccent</color>
+    <color name="groceryBackground">@color/vpnBlack</color>
+    <color name="textPrimary">@color/vpnWhite</color>
+    <color name="textSecondary">@color/vpnGrey</color>
+    <color name="cardBackgroundColor">@color/vpnDarkGrey</color>
+</resources>

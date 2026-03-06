@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/binanceBlack"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_trade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/binanceBlack"
+        app:tabIndicatorColor="@color/binanceYellow"
+        app:tabSelectedTextColor="@color/binanceYellow"
+        app:tabTextColor="@color/binanceTextGray">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sell" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Asset"
+            android:textColor="@color/binanceTextGray"
+            android:textSize="12sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/binanceGray"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="BTC / USDT"
+                    android:textColor="@color/binanceTextWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@android:drawable/arrow_down_float"
+                    app:tint="@color/binanceTextGray" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Amount (USD)"
+            android:textColor="@color/binanceTextGray"
+            android:textSize="12sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edittext_trade"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/binanceTextWhite"
+            android:textColorHint="@color/binanceLightGray" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:text="Buy BTC"
+            android:textAllCaps="false"
+            android:textColor="@color/binanceBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/binanceGreen"
+            app:cornerRadius="8dp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vpnBlack">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/auth_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/circle_dark"
+                android:padding="30dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                app:tint="@color/vpnAccent" />
+
+            <TextView
+                android:id="@+id/tv_auth_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Sign In"
+                android:textColor="@color/vpnWhite"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_auth_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Access your premium features"
+                android:textColor="@color/vpnGrey"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:hint="Email Address"
+                app:boxStrokeColor="@color/vpnAccent"
+                app:hintTextColor="@color/vpnAccent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/vpnWhite" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Password"
+                app:boxStrokeColor="@color/vpnAccent"
+                app:hintTextColor="@color/vpnAccent"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/vpnGrey">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/vpnWhite" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- OTP Code Field (Hidden by default) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_otp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Verification Code"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/vpnAccent"
+                app:hintTextColor="@color/vpnAccent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/vpnWhite" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:text="Forgot Password?"
+                android:textColor="@color/vpnAccent"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_auth"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="32dp"
+                android:text="Sign In"
+                android:textColor="@color/vpnBlack"
+                android:textStyle="bold"
+                app:backgroundTint="@color/vpnAccent"
+                app:cornerRadius="30dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_switch_auth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_switch_auth_prefix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account? "
+                    android:textColor="@color/vpnGrey" />
+
+                <TextView
+                    android:id="@+id/tv_switch_auth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:textColor="@color/vpnAccent"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Success View (Profit/Success state) -->
+    <LinearLayout
+        android:id="@+id/ll_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/vpnBlack"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_success_check"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@android:drawable/checkbox_on_background"
+            app:tint="@color/vpnGreen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Sign Up Successfully!"
+            android:textColor="@color/vpnGreen"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Your profile is ready. Enjoy your profit and free trial!"
+            android:textAlignment="center"
+            android:textColor="@color/vpnGrey"
+            android:textSize="16sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_continue_to_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="48dp"
+            android:text="Continue to Login"
+            android:textColor="@color/vpnBlack"
+            android:textStyle="bold"
+            app:backgroundTint="@color/vpnAccent"
+            app:cornerRadius="30dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
